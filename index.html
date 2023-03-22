@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tamanho">
+    <form action="#" method="get" class="formCliente">
+        <fieldset id="inform">
+            <label for="numPedido">Numero do pedido: </label>
+            <input type="number" id="numPedido" required>
+            <label for="">Nome do cliente: </label>
+            <input type="text" >
+            <label>Valor da compra:</label>
+            <input type="number" id="valorCompra" name="valorCompra"  />
+        </fieldset>
+        <fieldset>
+            <legend>Forma de pagamento</legend>
+            <select name="FormaPagamento" id="FormaPagamento">
+                <option value="">Selecione uma opção</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="cartão">Cartão</option>
+                <option value="pix">PIX</option>
+            </select>
+            <div id="troco" style="display:none;">
+            <label>Valor dado:</label>
+            <input type="number" id="valorDado" name="valorDado" />
+  
+            <label>Troco:</label>
+            <input type="number" id="valorTroco" name="valorTroco"  />
+            </div>
+
+        </fieldset>
+        <fieldset id="endereco">
+            <legend>Endereço</legend>
+            <section><label for="msg">Rua/Av: </label>
+                <textarea name="msg" id="end" required></textarea>
+            <section><label for="numero">N°: </label>
+            <input type="number" id="numero"></section>
+            <section><label for="bairro">Bairro: </label>
+            <input type="text" id="bairro"></section>
+            <section><label for="pontoRef">Ponto de referência: </label>
+            <input type="text" id="pontoRef"></section>
+        </fieldset>
+        <input type="button" value="Imprimir" id="btnImprimir" onclick="window.print()">
+    </form>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
